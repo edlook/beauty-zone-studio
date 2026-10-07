@@ -1,0 +1,51 @@
+/* Ergänzungen zum Original-Stylesheet: Logo, Chips, Leistungs-Karten, Ablauf, FAQ, Zitat */
+.bz-logo{display:block;height:58px;width:auto}
+@media (max-width:640px){.bz-logo{height:48px}}
+
+.bz-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.75rem 0 0;padding:0;list-style:none}
+.bz-chips li{border:1px solid var(--border);background:var(--background);border-radius:999px;padding:.5rem 1rem;font-size:.75rem;letter-spacing:.02em;color:var(--foreground)}
+
+.bz-svc{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-top:1.25rem}
+.bz-svc a{display:flex;flex-direction:column;gap:.55rem;border:1px solid var(--border);border-radius:1.5rem;padding:1.4rem;background:var(--card);transition:transform .25s,border-color .25s,box-shadow .25s}
+.bz-svc a:hover{transform:translateY(-2px);border-color:var(--primary);box-shadow:0 8px 24px -14px color-mix(in oklab,var(--primary) 55%,transparent)}
+.bz-svc h3{font-family:var(--font-serif);font-size:1.35rem;line-height:1.15;letter-spacing:-.02em}
+.bz-svc p{font-size:.85rem;line-height:1.55;color:var(--muted-foreground)}
+.bz-svc .more{margin-top:auto;padding-top:.4rem;font-size:.75rem;font-weight:500;color:var(--primary)}
+
+.bz-anchor{scroll-margin-top:2rem}
+
+.bz-stats{display:grid;gap:1.5rem 2rem;grid-template-columns:1fr}
+@media (min-width:640px){.bz-stats{grid-template-columns:repeat(2,1fr)}}
+.bz-stat{border-top:1px solid var(--border);padding-top:1.1rem}
+.bz-stat strong{display:block;font-family:var(--font-serif);font-weight:400;font-size:2rem;line-height:1.1;letter-spacing:-.03em;color:var(--primary)}
+.bz-stat span{display:block;margin-top:.45rem;font-size:.85rem;line-height:1.5;color:var(--muted-foreground)}
+
+.bz-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.bz-card{border-radius:1.5rem;background:var(--background);padding:1.6rem}
+.bz-card .n{font-family:var(--font-serif);font-size:1.6rem;color:var(--primary);line-height:1}
+.bz-card h3{margin-top:1rem;font-family:var(--font-serif);font-size:1.5rem;line-height:1.15;letter-spacing:-.02em}
+.bz-card p{margin-top:.7rem;font-size:.9rem;line-height:1.65;color:var(--muted-foreground)}
+.bz-card.alt{background:var(--card);border:1px solid var(--border)}
+
+.bz-faq details{border-top:1px solid var(--border)}
+.bz-faq details:last-child{border-bottom:1px solid var(--border)}
+.bz-faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 0;font-family:var(--font-serif);font-size:1.3rem;line-height:1.3}
+.bz-faq summary::-webkit-details-marker{display:none}
+.bz-faq summary::after{content:"+";font-family:var(--font-sans);font-size:1.5rem;line-height:1;color:var(--primary);transition:transform .2s}
+.bz-faq details[open] summary::after{transform:rotate(45deg)}
+.bz-faq summary:hover{color:var(--primary)}
+.bz-faq .a{padding:0 0 1.5rem;max-width:44rem;font-size:.95rem;line-height:1.75;color:var(--muted-foreground)}
+
+.bz-quote{margin:0;font-family:var(--font-serif);font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.22;letter-spacing:-.03em;max-width:46rem}
+.bz-quote-by{margin-top:1.1rem;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-foreground)}
+
+/* lange Wörter in Überschriften (z. B. „Wimpernverlängerung“) dürfen umbrechen statt aus dem Layout zu laufen */
+main h1,main h2{overflow-wrap:anywhere;hyphens:auto}
+
+.bz-split{display:grid;gap:2rem}
+@media (min-width:1024px){.bz-split{grid-template-columns:1.2fr .8fr;align-items:end;gap:4rem}}
+.bz-side-img{display:none}
+@media (min-width:1024px){.bz-side-img{display:block;margin-top:2rem;width:100%;max-width:20rem;height:16rem;object-fit:cover;border-radius:1.5rem}}
+
+/* fünf Menüpunkte sollen auch auf schmalen Handys ohne Wischen sichtbar sein */
+@media (max-width:480px){header nav[aria-label="Hauptnavigation"]{flex-wrap:wrap;overflow:visible;gap:.4rem 1.15rem;font-size:12px}}

@@ -8,7 +8,7 @@
 .bz-svc{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-top:1.25rem}
 .bz-svc a{display:flex;flex-direction:column;gap:.55rem;border:1px solid var(--border);border-radius:1.5rem;padding:1.4rem;background:var(--card);transition:transform .25s,border-color .25s,box-shadow .25s}
 .bz-svc a:hover{transform:translateY(-2px);border-color:var(--primary);box-shadow:0 8px 24px -14px color-mix(in oklab,var(--primary) 55%,transparent)}
-.bz-svc h3{font-family:var(--font-serif);font-size:1.35rem;line-height:1.15;letter-spacing:-.02em}
+.bz-svc h3{font-family:var(--font-serif);font-size:1.25rem;line-height:1.15;letter-spacing:-.02em;overflow-wrap:anywhere;hyphens:auto}
 .bz-svc p{font-size:.85rem;line-height:1.55;color:var(--muted-foreground)}
 .bz-svc .more{margin-top:auto;padding-top:.4rem;font-size:.75rem;font-weight:500;color:var(--primary)}
 
@@ -23,7 +23,7 @@
 .bz-cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
 .bz-card{border-radius:1.5rem;background:var(--background);padding:1.6rem}
 .bz-card .n{font-family:var(--font-serif);font-size:1.6rem;color:var(--primary);line-height:1}
-.bz-card h3{margin-top:1rem;font-family:var(--font-serif);font-size:1.5rem;line-height:1.15;letter-spacing:-.02em}
+.bz-card h3{margin-top:1rem;font-family:var(--font-serif);font-size:1.45rem;line-height:1.15;letter-spacing:-.02em;overflow-wrap:anywhere;hyphens:auto}
 .bz-card p{margin-top:.7rem;font-size:.9rem;line-height:1.65;color:var(--muted-foreground)}
 .bz-card.alt{background:var(--card);border:1px solid var(--border)}
 
@@ -49,3 +49,36 @@ main h1,main h2{overflow-wrap:anywhere;hyphens:auto}
 
 /* fünf Menüpunkte sollen auch auf schmalen Handys ohne Wischen sichtbar sein */
 @media (max-width:480px){header nav[aria-label="Hauptnavigation"]{flex-wrap:wrap;overflow:visible;gap:.4rem 1.15rem;font-size:12px}}
+
+/* Preislisten */
+.bz-price-grid{display:grid;gap:1.25rem}
+@media (min-width:1024px){.bz-price-grid{grid-template-columns:1.35fr .65fr;align-items:start}}
+.bz-price-card{border:1px solid var(--border);background:var(--card);border-radius:1.5rem;padding:1.5rem 1.5rem 1.2rem}
+@media (min-width:640px){.bz-price-card{padding:1.9rem 2rem 1.5rem}}
+.bz-price-card h3{font-family:var(--font-serif);font-size:1.5rem;line-height:1.15;letter-spacing:-.02em;margin-bottom:1rem}
+.bz-table{width:100%;border-collapse:collapse;font-size:.92rem}
+.bz-table th{font-weight:500;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-foreground);text-align:right;padding:0 0 .7rem .6rem}
+.bz-table th:first-child,.bz-table td:first-child{text-align:left;padding-left:0}
+.bz-table td{white-space:nowrap;padding:.85rem 0 .85rem .6rem;border-top:1px solid var(--border);text-align:right;font-variant-numeric:tabular-nums;color:var(--muted-foreground)}
+.bz-table td:first-child{color:var(--foreground);white-space:normal}
+.bz-table td.strong{font-family:var(--font-serif);font-size:1.1rem;color:var(--primary)}
+.bz-prices{list-style:none;margin:0;padding:0}
+.bz-prices li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.85rem 0;border-top:1px solid var(--border);font-size:.92rem;line-height:1.45}
+.bz-prices li:first-child{border-top:0;padding-top:.2rem}
+.bz-prices .p{flex:none;font-family:var(--font-serif);font-size:1.15rem;color:var(--primary);font-variant-numeric:tabular-nums}
+.bz-prices small{display:block;color:var(--muted-foreground);font-size:.78rem}
+.bz-note{margin-top:1.1rem;font-size:.72rem;line-height:1.55;color:var(--muted-foreground)}
+.bz-svc .price{margin-top:auto;padding-top:.6rem;font-family:var(--font-serif);font-size:1.05rem;color:var(--primary)}
+.bz-svc .price+.more{margin-top:0;padding-top:.1rem}
+
+/* Stimmen */
+.bz-voices{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.bz-voice{margin:0;border-radius:1.5rem;background:var(--background);padding:1.8rem}
+.bz-voice blockquote{margin:0;font-family:var(--font-serif);font-size:1.3rem;line-height:1.4;letter-spacing:-.015em}
+.bz-voice figcaption{margin-top:1.1rem;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-foreground)}
+
+/* Bildunterschrift im abgerundeten Bild-Container: ersten Buchstaben nicht von der Rundung abschneiden lassen */
+.rounded-\[1\.25rem\]>p{padding:0 .9rem .5rem}
+.bz-price-grid>*{min-width:0}
+@media (max-width:420px){.bz-table{font-size:.85rem}.bz-table th{letter-spacing:.08em;padding-left:.4rem}.bz-table td{padding-left:.4rem}.bz-price-card{padding:1.3rem 1.1rem 1rem}}
+@media (max-width:380px){.bz-table{font-size:.8rem}.bz-table th{font-size:.6rem;letter-spacing:.05em;padding-left:.3rem}.bz-table td{padding-left:.3rem}.bz-table td.strong{font-size:1rem}}

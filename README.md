@@ -4,8 +4,8 @@
 
 ## Страницы
 - `index.html` — Startseite
-- `permanent-make-up.html` — Permanent Make-up (новая, по материалам Instagram)
-- `wimpern.html` — Wimpern
+- `permanent-make-up.html` — Permanent Make-up (новая, по материалам Instagram; с прайсом)
+- `wimpern.html` — Wimpern (с прайсом на Wimpernverlängerung и Brow & Lash Lifting)
 - `wimpernverlangerung-schulung.html` — Schulung
 - `impressum.html` — Kontakt & Impressum
 

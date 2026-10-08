@@ -82,3 +82,11 @@ main h1,main h2{overflow-wrap:anywhere;hyphens:auto}
 .bz-price-grid>*{min-width:0}
 @media (max-width:420px){.bz-table{font-size:.85rem}.bz-table th{letter-spacing:.08em;padding-left:.4rem}.bz-table td{padding-left:.4rem}.bz-price-card{padding:1.3rem 1.1rem 1rem}}
 @media (max-width:380px){.bz-table{font-size:.8rem}.bz-table th{font-size:.6rem;letter-spacing:.05em;padding-left:.3rem}.bz-table td{padding-left:.3rem}.bz-table td.strong{font-size:1rem}}
+
+/* Handy: Logo und Termin-Button sollen in einer Zeile bleiben */
+@media (max-width:480px){.bz-logo{height:42px}header>div{column-gap:.75rem}}
+
+/* Finales Logo (Wortmarke): Desktop voll, Handy kompakt ohne Unterzeile */
+.bz-logo{height:54px;width:auto}
+@media (max-width:480px){.bz-logo{height:30px}}
+@media (max-width:380px){.bz-logo{height:26px}}

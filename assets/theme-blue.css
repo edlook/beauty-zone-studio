@@ -1,0 +1,41 @@
+/* Farbwelt "Schwarz · Elektroblau · Gold" (angelehnt an Yanas Instagram-Auftritt) */
+html.bz-blue{
+  color-scheme:dark;
+  --background:#06070c; --foreground:#f3f5fb;
+  --card:#0c0f19; --card-foreground:#f3f5fb;
+  --popover:#0c0f19; --popover-foreground:#f3f5fb;
+  --primary:#3f6dff; --primary-foreground:#ffffff;
+  --secondary:#0b1020; --secondary-foreground:#f3f5fb;
+  --muted:#101424; --muted-foreground:#9aa4bf;
+  --accent:#c9a86a; --accent-foreground:#06070c;
+  --border:#1d2440; --input:#1d2440; --ring:#3f6dff;
+}
+/* Bildverläufe sind immer dunkel, Text darauf immer hell – unabhängig vom Theme */
+html.bz-blue .from-foreground\/45{--tw-gradient-from:rgb(2 4 12 / .55)}
+html.bz-blue .from-foreground\/55{--tw-gradient-from:rgb(2 4 12 / .66)}
+html.bz-blue .from-foreground\/70{--tw-gradient-from:rgb(2 4 12 / .80)}
+html.bz-blue .via-foreground\/5,html.bz-blue .to-foreground\/5{--tw-gradient-via:rgb(2 4 12 / .04);--tw-gradient-to:rgb(2 4 12 / .08)}
+html.bz-blue .text-background{color:#fff}
+html.bz-blue .text-background\/75{color:rgb(255 255 255 / .78)}
+html.bz-blue .text-background\/80{color:rgb(255 255 255 / .82)}
+html.bz-blue .border-background\/45{border-color:rgb(255 255 255 / .45)}
+html.bz-blue .border-background\/50{border-color:rgb(255 255 255 / .5)}
+html.bz-blue .border-background\/55{border-color:rgb(255 255 255 / .55)}
+html.bz-blue .group:hover .group-hover\:bg-background{background:#fff}
+html.bz-blue .group:hover .group-hover\:text-foreground{color:#06070c}
+/* Hero-Umschalter */
+html.bz-blue div[aria-label="Behandlung wählen"] button[aria-pressed="true"]{background:#fff;color:#06070c;border-color:#fff}
+html.bz-blue div[aria-label="Behandlung wählen"] button[aria-pressed="false"]{background:rgb(6 7 12 / .5);color:#fff;border-color:rgb(255 255 255 / .55)}
+html.bz-blue div[aria-label="Behandlung wählen"] button[aria-pressed="false"]:hover{background:rgb(63 109 255 / .45)}
+/* weiße Buttons auf blauer Fläche */
+html.bz-blue section.bg-primary a.bg-background{background:#fff;color:#06070c}
+/* Kopfzeile: leicht transparent mit Blur wie bei modernen Dark-Sites */
+html.bz-blue header.bg-background\/95{background:rgb(6 7 12 / .88);backdrop-filter:blur(10px)}
+/* Gold für feine Details und Preise */
+html.bz-blue .bz-prices .p,html.bz-blue .bz-svc .price,html.bz-blue .bz-table td.strong,html.bz-blue .bz-stat strong,html.bz-blue .bz-card .n{color:#c9a86a}
+html.bz-blue .bz-chips li{border-color:rgb(201 168 106 / .4)}
+html.bz-blue .bz-svc a:hover{border-color:#c9a86a;box-shadow:0 10px 30px -16px rgb(63 109 255 / .6)}
+html.bz-blue .bz-faq summary::after{color:#c9a86a}
+html.bz-blue .bz-quote-by,html.bz-blue .bz-voice figcaption{color:#c9a86a}
+html.bz-blue .bz-card{border:1px solid var(--border);background:var(--card)}
+html.bz-blue .text-primary-foreground\/75,html.bz-blue .text-primary-foreground\/80,html.bz-blue .text-primary-foreground\/85{color:rgb(255 255 255 / .93)}
